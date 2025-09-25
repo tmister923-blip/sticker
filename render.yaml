@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: discord-sticker-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    # Environment variables to be set in Render dashboard:
+    # DISCORD_TOKEN - Your bot's token from Discord Developer Portal
+    # CLIENT_ID - Your bot's client/application ID
